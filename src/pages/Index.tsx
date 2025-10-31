@@ -79,12 +79,6 @@ const Index = () => {
                 </div>
               </div>
               
-              {/* Contact Info */}
-              <div className="hidden md:flex items-center gap-2 text-sm text-gray-600">
-                <Phone className="h-4 w-4 text-kenya-gold" />
-                <span className="font-medium text-xs sm:text-sm">+254 715 009 829</span>
-              </div>
-              
               {/* CTA Button */}
               <Button 
                 onClick={scrollToApplication}
@@ -653,14 +647,7 @@ const Index = () => {
       {/* Contact Section */}
       <section className="py-16 bg-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 text-white text-center">
-            <div className="flex items-center justify-center gap-3">
-              <Phone className="h-6 w-6 text-kenya-gold" />
-              <div>
-                <div className="font-semibold">Call Us</div>
-                <div className="text-white/80">+254 700 000 000</div>
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 gap-8 text-white text-center max-w-3xl mx-auto">
             <div className="flex items-center justify-center gap-3">
               <Mail className="h-6 w-6 text-kenya-gold" />
               <div>
