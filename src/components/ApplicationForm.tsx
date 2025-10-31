@@ -268,6 +268,25 @@ const ApplicationForm = () => {
       // Generate unique reference
       const reference = `KINGDOM-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
 
+      // Save application data first
+      try {
+        await fetch('/api/submit-application', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            ...extendedFormData,
+            phone: formattedPhone,
+            paymentReference: reference
+          })
+        });
+        console.log('Application data saved');
+      } catch (err) {
+        console.error('Failed to save application:', err);
+        // Continue with payment anyway
+      }
+
       // Initiate payment
       const response = await fetch('/api/initiate-payment', {
         method: 'POST',
