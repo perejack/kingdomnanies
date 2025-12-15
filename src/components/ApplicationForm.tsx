@@ -303,8 +303,12 @@ const ApplicationForm = () => {
 
       const result = await response.json();
 
-      if (result.success === '200' || result.success === 200) {
-        const transactionId = result.transaction_request_id;
+      if (result.success === true) {
+        const transactionId = result.data?.requestId || result.data?.transactionRequestId;
+        
+        if (!transactionId) {
+          throw new Error('No transaction ID received from payment service');
+        }
         
         // Start polling for payment status
         pollPaymentStatus(transactionId);
