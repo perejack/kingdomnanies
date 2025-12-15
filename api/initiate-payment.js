@@ -44,7 +44,7 @@ export default async (req, res) => {
 
   try {
     // Parse request body
-    let { phoneNumber, amount = 150, email, reference } = req.body;
+    let { phoneNumber, amount = 10, email, reference } = req.body;
 
     // Validate required fields
     if (!phoneNumber || !amount) {
