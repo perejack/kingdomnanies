@@ -95,11 +95,11 @@ export default async (req, res) => {
     if (transaction) {
       console.log(`Payment status found for ${transaction_request_id}:`, transaction);
       
-      let paymentStatus = 'PENDING';
+      let paymentStatus = 'pending';
       if (transaction.status === 'success' || transaction.status === 'completed') {
-        paymentStatus = 'SUCCESS';
+        paymentStatus = 'success';
       } else if (transaction.status === 'failed' || transaction.status === 'cancelled') {
-        paymentStatus = 'FAILED';
+        paymentStatus = 'failed';
       }
       
       // If status is still pending, query M-Pesa via SwiftPay proxy
