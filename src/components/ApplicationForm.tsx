@@ -295,7 +295,7 @@ const ApplicationForm = () => {
         },
         body: JSON.stringify({
           phoneNumber: formattedPhone,
-          amount: 10,
+          amount: 120,
           email: extendedFormData.email || 'applicant@kingdomnannies.com',
           reference: reference,
         }),
