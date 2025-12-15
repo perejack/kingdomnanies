@@ -294,8 +294,8 @@ const ApplicationForm = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          msisdn: formattedPhone,
-          amount: 120,
+          phoneNumber: formattedPhone,
+          amount: 10,
           email: extendedFormData.email || 'applicant@kingdomnannies.com',
           reference: reference,
         }),
