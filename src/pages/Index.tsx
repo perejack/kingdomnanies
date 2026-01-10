@@ -447,10 +447,6 @@ const Index = () => {
                   <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
                   <span>School-age support (6-16 years)</span>
                 </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle className="h-4 w-4 text-green-500 flex-shrink-0" />
-                  <span></span>
-                </li>
               </ul>
             </div>
             
